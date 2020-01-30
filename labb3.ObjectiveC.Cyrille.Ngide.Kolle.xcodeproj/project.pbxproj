@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6910B3023D5EB6700F76E1A /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = E6910B2F23D5EB6700F76E1A /* Todo.m */; };
+		E6910B3C23D5F1BD00F76E1A /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6910B3B23D5F1BD00F76E1A /* MyTableViewController.m */; };
+		E6910B3F23D6468700F76E1A /* ToDOList.m in Sources */ = {isa = PBXBuildFile; fileRef = E6910B3E23D6468700F76E1A /* ToDOList.m */; };
+		E6910B4223D7275D00F76E1A /* SingletonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E6910B4123D7275D00F76E1A /* SingletonClass.m */; };
 		E6978C0B23D5BDEB00ACFF48 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6978C0A23D5BDEB00ACFF48 /* AppDelegate.m */; };
 		E6978C0E23D5BDEB00ACFF48 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6978C0D23D5BDEB00ACFF48 /* SceneDelegate.m */; };
 		E6978C1123D5BDEB00ACFF48 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6978C1023D5BDEB00ACFF48 /* ViewController.m */; };
@@ -36,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E6910B2E23D5EB6700F76E1A /* Todo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
+		E6910B2F23D5EB6700F76E1A /* Todo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
+		E6910B3A23D5F1BD00F76E1A /* MyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		E6910B3B23D5F1BD00F76E1A /* MyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		E6910B3D23D6468700F76E1A /* ToDOList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDOList.h; sourceTree = "<group>"; };
+		E6910B3E23D6468700F76E1A /* ToDOList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDOList.m; sourceTree = "<group>"; };
+		E6910B4023D7275D00F76E1A /* SingletonClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SingletonClass.h; path = ../../../Desktop/Labb1.ObjectiveC.CyrilleNgideKolle/Labb1.ObjectiveC.CyrilleNgideKolle/SingletonClass.h; sourceTree = "<group>"; };
+		E6910B4123D7275D00F76E1A /* SingletonClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SingletonClass.m; path = ../../../Desktop/Labb1.ObjectiveC.CyrilleNgideKolle/Labb1.ObjectiveC.CyrilleNgideKolle/SingletonClass.m; sourceTree = "<group>"; };
 		E6978C0623D5BDEB00ACFF48 /* labb3.ObjectiveC.Cyrille.Ngide.Kolle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = labb3.ObjectiveC.Cyrille.Ngide.Kolle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6978C0923D5BDEB00ACFF48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E6978C0A23D5BDEB00ACFF48 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -107,9 +119,17 @@
 				E6978C0923D5BDEB00ACFF48 /* AppDelegate.h */,
 				E6978C0A23D5BDEB00ACFF48 /* AppDelegate.m */,
 				E6978C0C23D5BDEB00ACFF48 /* SceneDelegate.h */,
+				E6910B3A23D5F1BD00F76E1A /* MyTableViewController.h */,
+				E6910B3B23D5F1BD00F76E1A /* MyTableViewController.m */,
+				E6910B4023D7275D00F76E1A /* SingletonClass.h */,
+				E6910B3E23D6468700F76E1A /* ToDOList.m */,
+				E6910B3D23D6468700F76E1A /* ToDOList.h */,
+				E6910B4123D7275D00F76E1A /* SingletonClass.m */,
 				E6978C0D23D5BDEB00ACFF48 /* SceneDelegate.m */,
 				E6978C0F23D5BDEB00ACFF48 /* ViewController.h */,
 				E6978C1023D5BDEB00ACFF48 /* ViewController.m */,
+				E6910B2E23D5EB6700F76E1A /* Todo.h */,
+				E6910B2F23D5EB6700F76E1A /* Todo.m */,
 				E6978C1223D5BDEB00ACFF48 /* Main.storyboard */,
 				E6978C1523D5BDEE00ACFF48 /* Assets.xcassets */,
 				E6978C1723D5BDEE00ACFF48 /* LaunchScreen.storyboard */,
@@ -268,7 +288,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6978C1123D5BDEB00ACFF48 /* ViewController.m in Sources */,
+				E6910B3023D5EB6700F76E1A /* Todo.m in Sources */,
 				E6978C0B23D5BDEB00ACFF48 /* AppDelegate.m in Sources */,
+				E6910B3F23D6468700F76E1A /* ToDOList.m in Sources */,
+				E6910B4223D7275D00F76E1A /* SingletonClass.m in Sources */,
+				E6910B3C23D5F1BD00F76E1A /* MyTableViewController.m in Sources */,
 				E6978C1C23D5BDEE00ACFF48 /* main.m in Sources */,
 				E6978C0E23D5BDEB00ACFF48 /* SceneDelegate.m in Sources */,
 			);
@@ -440,6 +464,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 859VSLGY88;
 				INFOPLIST_FILE = labb3.ObjectiveC.Cyrille.Ngide.Kolle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 859VSLGY88;
 				INFOPLIST_FILE = labb3.ObjectiveC.Cyrille.Ngide.Kolle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
