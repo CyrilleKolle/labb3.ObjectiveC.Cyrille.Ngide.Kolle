@@ -18,12 +18,10 @@
 @property (nonatomic) ToDOList* todolist;
 @property (nonatomic) Todo* todo;
 @property (nonatomic) NSMutableArray* arrayToDelete;
-@property (nonatomic)NSMutableArray* arrayImportant;
+@property (nonatomic) NSMutableArray* arrayImportant;
 
 
 - (IBAction)deleteTodo: (UIButton *)sender;
-- (IBAction)importantButtonA:(UIButton *)sender;
-
 
 @end
 

@@ -57,7 +57,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="importantButtonA:" destination="IdQ-qP-O8c" eventType="touchUpInside" id="TYa-zG-Rfr"/>
+                                    <action selector="importantButtonA:event:" destination="IdQ-qP-O8c" eventType="touchUpInside" id="63R-Qv-8wz"/>
                                 </connections>
                             </button>
                         </subviews>

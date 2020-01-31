@@ -23,11 +23,13 @@
     self.arrayImportant =[[NSMutableArray alloc]init];
     
     
-//   NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-//    NSMutableArray *myString = [prefs objectForKey:@"todo"];    self.todolist =myString;
-
     
-    [self saveInfo];
+    
+    
+   [self loadData];
+    
+    
+  
     [self.tableV reloadData];
 
 }
@@ -44,8 +46,31 @@
     [userDefault setObject:impTodoos forKey:@"impo"];
     [userDefault synchronize];
     [self.tableV reloadData];
+    
+    NSLog(@"%@ and %@",todoos, impTodoos);
 
 
+}
+
+-(void)loadData{
+    NSArray *arr = [[NSArray alloc]init];
+    NSArray *arr2 = [[NSArray alloc]init];
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    arr = [userDefault arrayForKey:@"todo"];
+    arr2 = [userDefault arrayForKey:@"impo"];
+    NSLog(@"Loaded state: %@ and %@", arr, arr2);
+    for (NSString *string in arr) {
+        Todo *todo = [[Todo alloc]init];
+        todo.name =string;
+        [self.todolist.todoos addObject:todo];
+        
+    }
+    for (NSString *str in arr2) {
+           Todo *todo = [[Todo alloc]init];
+             todo.name =str;
+             [self.arrayImportant addObject:todo];
+    }
+       
 }
 -(NSMutableArray*) convertImpTodo{
     NSMutableArray *arr = [[NSMutableArray alloc]init];
@@ -67,6 +92,7 @@
     
     [self.tableV reloadData];
     [[SingletonClass Instance]setData:@""];
+     [self saveInfo];
     
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -100,8 +126,11 @@
    
     if (section == 1) {
         return self.arrayImportant.count;
+    } else {
+        
+        return [self.todolist getSize];
     }
-   return [self.todolist getSize];
+    
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     if(section==0){
@@ -125,26 +154,26 @@
             [self.arrayImportant removeObject:string];
         }
         [self.arrayToDelete removeAllObjects];
+         //[self saveInfo];
         [self.tableV reloadData];
     
     }
 }
 
-- (IBAction)importantButtonA:(UIButton *)sender{
+- (IBAction)importantButtonA:(UIButton *)sender event:(UIEvent *)event{
             
-    if(self.todolist.todoos.count){
-        
-    NSString *str;
-    for(str in self.todolist.todoos){
-            [self.todolist.todoos removeObject:str];
-            [self.arrayImportant addObject:str];
-             [self.tableV reloadData];
-    }
-        [self.tableV reloadData];
-        
-
     
-    }
+        
+        UITouch *touch = [[event allTouches] anyObject];
+        CGPoint touchPos = [touch locationInView:self.tableV];
+        NSIndexPath *indexpath = [self.tableV indexPathForRowAtPoint:touchPos];
+        if(self.todolist.todoos.count){
+            [self.arrayImportant addObject:_todolist.todoos[indexpath.row]];
+            [self.todolist.todoos removeObjectAtIndex:indexpath.row];
+            [self.tableV reloadData];
+          
+       }
+
 
 }
     
